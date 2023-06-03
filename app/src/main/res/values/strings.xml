@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_name">English Vocabulary</string>
+    <string name="english_vocabulary">English\nVocabulary</string>
+    <string name="start">начать</string>
+    <string name="progress">прогресс</string>
+    <string name="restart">перезапуск</string>
+    <string name="levels">Уровни:</string>
+    <string name="go_back">назад</string>
+    <string name="topic_r">Тема:</string>
+    <string name="beginner">Beginner-A1</string>
+    <string name="elementary">Elementary-A2</string>
+    <string name="intermediate">Intermediate-B1</string>
+    <string name="upper_intermediate">Upper-Intermediate-B2</string>
+    <string name="upper_n_intermediate">Upper-\nIntermediate-B2</string>
+    <string name="advanced">Advanced-C1</string>
+    <string name="proficiency">Proficiency-C2</string>
+    <string name="play">играть</string>
+    <string name="level">Level</string>
+    <string name="topic">Topic</string>
+    <string name="english_word">English word</string>
+    <string name="russian_word">Russian word</string>
+    <string name="equals_sign">=</string>
+    <string name="hint_translation">Введите перевод</string>
+    <string name="answer">ответить</string>
+    <string name="n">N</string>
+    <string name="next">продолжить</string>
+    <string name="topic_rus">Тема</string>
+    <string name="results">Итоги</string>
+    <string name="result_first_line">Ваш результат:</string>
+    <string name="redo_level">пройти уровень заново</string>
+    <string name="next_level">следующий уровень</string>
+
+
+</resources>

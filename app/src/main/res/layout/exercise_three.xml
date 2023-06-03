@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/blue_background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:ignore="MissingClass">
+
+    <TextView
+        android:id="@+id/textview_three_level"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/style_textview"
+        android:fontFamily="@font/abeezee"
+        android:paddingTop="3dp"
+        android:paddingBottom="3dp"
+        android:text="@string/level"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        android:textStyle="bold">
+
+    </TextView>
+
+    <TextView
+        android:fontFamily="@font/abeezee"
+        android:paddingTop="3dp"
+        android:paddingBottom="3dp"
+        android:layout_below="@+id/textview_three_level"
+        android:id="@+id/textview_three_topic"
+        android:background="@drawable/style_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:text="@string/topic"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        android:textStyle="bold">
+
+    </TextView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardview_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="65dp"
+        android:layout_marginTop="150dp"
+        android:layout_marginBottom="340dp"
+        android:layout_marginEnd="65dp"
+        app:cardBackgroundColor="@color/black"
+        app:cardCornerRadius="12dp">
+
+        <ImageView
+            android:id="@+id/img_three"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="4dp"
+            android:background="@drawable/style_image"
+            android:scaleType="centerCrop"
+            android:src="@drawable/img_exer3">
+
+        </ImageView>
+
+    </androidx.cardview.widget.CardView>
+
+
+    <TextView
+        android:fontFamily="@font/abeezee"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:textColor="@color/black"
+        android:textAlignment="center"
+        android:textSize="25sp"
+        android:text="@string/russian_word"
+        android:background="@drawable/style_textview"
+        android:layout_marginEnd="65dp"
+        android:layout_marginStart="65dp"
+        android:layout_marginTop="230dp"
+        android:layout_below="@+id/textview_three_topic"
+        android:id="@+id/textview_three_russian_word"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </TextView>
+
+    <RelativeLayout
+        android:layout_marginEnd="65dp"
+        android:layout_marginStart="65dp"
+        android:layout_marginTop="35dp"
+        android:layout_below="@+id/textview_three_russian_word"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:fontFamily="@font/abeezee"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:id="@+id/textview_three_answer1"
+            android:text="@string/english_word"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:background="@drawable/style_textview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </TextView>
+
+        <TextView
+            android:fontFamily="@font/abeezee"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:layout_marginTop="15dp"
+            android:id="@+id/textview_three_answer2"
+            android:layout_below="@id/textview_three_answer1"
+            android:text="@string/english_word"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:background="@drawable/style_textview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </TextView>
+
+        <TextView
+            android:fontFamily="@font/abeezee"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:layout_marginTop="15dp"
+            android:id="@+id/textview_three_answer3"
+            android:layout_below="@id/textview_three_answer2"
+            android:text="@string/english_word"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:background="@drawable/style_textview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/textview_three_answer4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textview_three_answer3"
+            android:background="@drawable/style_textview"
+            android:fontFamily="@font/abeezee"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:layout_marginTop="15dp"
+            android:text="@string/english_word"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="25sp">
+
+        </TextView>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>
