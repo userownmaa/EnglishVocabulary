@@ -22,12 +22,12 @@ public class LevelsActivity extends AppCompatActivity {
         finish();
     }
     @SuppressLint({"ResourceAsColor", "UseCompatLoadingForDrawables"})
-    public void openLevel(TextView textLvl, Button btnLvl, ProgressBar pgLvl, RelativeLayout layout) {
+    public void openLevel(TextView textLvl, ProgressBar progressBar, Button btnLvl, RelativeLayout layout) {
         btnLvl.setEnabled(true);
         btnLvl.setBackground(getDrawable(R.drawable.style_button));
         btnLvl.setTextColor(getResources().getColor(R.color.black));
+        progressBar.setProgressDrawable(getDrawable(R.drawable.style_progressbar));
         layout.setBackground(getDrawable(R.drawable.style_textview));
-        pgLvl.setProgressDrawable(getDrawable(R.drawable.style_progressbar));
         textLvl.setTextColor(getResources().getColor(R.color.black));
     }
 
@@ -41,6 +41,7 @@ public class LevelsActivity extends AppCompatActivity {
 
         SharedPreferences sp = getSharedPreferences("Save", MODE_PRIVATE);
         SharedPreferences.Editor editor = sp.edit();
+        //editor.clear().apply();
 
         int beginnerLvl = sp.getInt("level_beginner", 0);
         int elementaryLvl = sp.getInt("level_elementary", 0);
@@ -80,34 +81,32 @@ public class LevelsActivity extends AppCompatActivity {
         Button btnLvlSix = findViewById(R.id.button_start_c2);
 
         ProgressBar pgLvlOne = findViewById(R.id.progress_bar_a1);
-        ProgressBar pgLvlTwo = findViewById(R.id.progress_bar_a2);
-        ProgressBar pgLvlThree = findViewById(R.id.progress_bar_b1);
-        ProgressBar pgLvlFour = findViewById(R.id.progress_bar_b2);
-        ProgressBar pgLvlFive = findViewById(R.id.progress_bar_c1);
-        ProgressBar pgLvlSix = findViewById(R.id.progress_bar_c2);
-
         pgLvlOne.setProgress(beginnerLvl);
+        ProgressBar pgLvlTwo = findViewById(R.id.progress_bar_a2);
         pgLvlTwo.setProgress(elementaryLvl);
+        ProgressBar pgLvlThree = findViewById(R.id.progress_bar_b1);
         pgLvlThree.setProgress(intermediateLvl);
+        ProgressBar pgLvlFour = findViewById(R.id.progress_bar_b2);
         pgLvlFour.setProgress(upIntermediateLvl);
+        ProgressBar pgLvlFive = findViewById(R.id.progress_bar_c1);
         pgLvlFive.setProgress(advancedLvl);
+        ProgressBar pgLvlSix = findViewById(R.id.progress_bar_c2);
         pgLvlSix.setProgress(proficiencyLvl);
 
-
         if (beginnerLvl >= 70) {
-            openLevel(textLvlTwo, btnLvlTwo, pgLvlTwo, layoutTwo);
+            openLevel(textLvlTwo, pgLvlTwo, btnLvlTwo, layoutTwo);
         }  else { btnLvlTwo.setEnabled(false); }
         if (elementaryLvl >= 70) {
-            openLevel(textLvlThree, btnLvlThree, pgLvlThree, layoutThree);
+            openLevel(textLvlThree, pgLvlThree, btnLvlThree, layoutThree);
         } else { btnLvlThree.setEnabled(false); }
         if (intermediateLvl >= 70) {
-            openLevel(textLvlFour, btnLvlFour, pgLvlFour, layoutFour);
+            openLevel(textLvlFour, pgLvlFour, btnLvlFour, layoutFour);
         } else { btnLvlFour.setEnabled(false); }
         if (upIntermediateLvl >= 70) {
-            openLevel(textLvlFive, btnLvlFive, pgLvlFive, layoutFive);
+            openLevel(textLvlFive, pgLvlFive, btnLvlFive, layoutFive);
         } else { btnLvlFive.setEnabled(false); }
         if (advancedLvl >= 70) {
-            openLevel(textLvlSix, btnLvlSix, pgLvlSix, layoutSix);
+            openLevel(textLvlSix, pgLvlSix, btnLvlSix, layoutSix);
         } else { btnLvlSix.setEnabled(false); }
 
         btnLvlOne.setOnClickListener(new View.OnClickListener() {

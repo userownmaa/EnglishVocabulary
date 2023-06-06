@@ -16,9 +16,8 @@ import androidx.appcompat.app.AppCompatActivity;
 public class ResultsActivity extends AppCompatActivity {
 
     int indexLevel = Index.getIndexLevel();
-    Array array = new Array();
 
-    @SuppressLint("ResourceAsColor")
+    @SuppressLint({"ResourceAsColor", "UseCompatLoadingForDrawables"})
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,12 +37,12 @@ public class ResultsActivity extends AppCompatActivity {
         int proficiencyLvl = sp.getInt("level_proficiency", 0);
 
         final int[] progresses = {
-             beginnerLvl,
-             elementaryLvl,
-             intermediateLvl,
-             upIntermediateLvl,
-             advancedLvl,
-             proficiencyLvl,
+                beginnerLvl,
+                elementaryLvl,
+                intermediateLvl,
+                upIntermediateLvl,
+                advancedLvl,
+                proficiencyLvl,
         };
 
         TextView textResultPercent = findViewById(R.id.textview_result_percent);
@@ -60,7 +59,7 @@ public class ResultsActivity extends AppCompatActivity {
         }  else { btnNext.setEnabled(false); }
 
         if (indexLevel == 0) {
-            if (sp.getInt("level_beginner", 0) < resultPercentInt) {
+            if (beginnerLvl < resultPercentInt) {
                 editor.putInt("level_beginner", resultPercentInt);
                 editor.apply();
             }
@@ -93,7 +92,6 @@ public class ResultsActivity extends AppCompatActivity {
                 editor.apply();
             }
         }
-
 
         btnRedo.setOnClickListener(new View.OnClickListener() {
             @Override
